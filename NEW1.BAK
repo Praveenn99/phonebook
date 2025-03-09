@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+char pass[30],ch;
+int i;
+window(1,1,80,25);
+textbackground(YELLOW);
+clrscr();
+window(20,10,60,15);
+textbackground(BLACK);
+clrscr();
+gotoxy(4,3);
+textcolor(RED+BLINK);
+cprintf("Enter your password :");
+i=0;
+while(1)
+ {
+  ch=getch();
+  if(ch==13)
+  { pass[i]='\0';
+    break;
+  }
+ pass[i++]=ch;
+ printf("*");
+ }
+}
